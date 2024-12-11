@@ -14,7 +14,13 @@ function PageRestaurantes() {
   return (
     <div>
       <h1> BIENVENIDO A NUESTROS RESTAURANTES</h1>
-      <RestaurantCard />
+      {restaurants.map((restaurant) => (
+        <RestaurantCard 
+          id={restaurant.id} 
+          name={restaurant.name} 
+          description={restaurant.description} 
+        />
+      ))}
     </div>
   )
 }

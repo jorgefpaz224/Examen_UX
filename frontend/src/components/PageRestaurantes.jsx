@@ -14,7 +14,7 @@ function PageRestaurantes() {
   return (
     <div>
       <h1> BIENVENIDO A NUESTROS RESTAURANTES</h1>
-      <Restaurant />
+      <RestaurantCard />
     </div>
   )
 }

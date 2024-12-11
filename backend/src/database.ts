@@ -32,6 +32,8 @@ export const sequelize = process.env.DATABASE_URL
         }
     );
 
+
+    //TABLA DE RESTAURANTES
 export const restaurantes = sequelize.define('restaurantes', {
     id:{
         type: DataTypes.INTEGER,
@@ -51,6 +53,7 @@ export const restaurantes = sequelize.define('restaurantes', {
     },
 })
 
+//TABLA DE DISPONIBILIDAD DE RESTAURANTES
 export const restaurant_availability = sequelize.define('restaurant_availability', {
     id:{
         type: DataTypes.INTEGER,
@@ -87,5 +90,7 @@ export const restaurant_availability = sequelize.define('restaurant_availability
     }
 });
 
+
+//RELACIONES DE TABLAS UNO A MUCHOS 
 restaurantes.hasMany(restaurant_availability, { foreignKey: 'restaurant_id' });
 restaurant_availability.belongsTo(restaurantes, { foreignKey: 'restaurant_id' });

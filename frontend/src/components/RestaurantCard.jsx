@@ -1,8 +1,21 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { useState } from "react";
+
 
 import "./RestaurantCard.css";
+//const [showInfo, setShowInfo] = useState(false);
+
+/*funciones para abrir y cerrar la informacion de los restaurantes
+const openInfo = () => {
+  setShowInfo(true);
+};
+
+const closeInfo = () => {
+  setShowInfo(false);
+}*/
+
 
 function RestaurantCard(key, nombre_restaurante, descripcion_restaurante) {
   return (
